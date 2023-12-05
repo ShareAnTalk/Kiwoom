@@ -13,7 +13,7 @@
 		<Product>AntTalk</Product>
 		<Description>library for AnyCPU use and convenient of Kiwoom OpenAPI</Description>
 		<Copyright>Copyright ⓒ 2023, ShareInvest Corp.</Copyright>
-		<PackageProjectUrl>https://github.com/Share-Invest/open-api-modules</PackageProjectUrl>
+		<PackageProjectUrl>https://github.com/ShareAnTalk/Kiwoom</PackageProjectUrl>
 		<PackageIcon>RoundLogo.png</PackageIcon>
 		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
 		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
