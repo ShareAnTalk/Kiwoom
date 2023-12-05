@@ -31,7 +31,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="ShareInvest.OpenAPI.TR.Entity" Version="1.1.1.3" />
+		<PackageReference Include="ShareInvest.OpenAPI.TR.Entity" Version="7.1.2.9" />
 	</ItemGroup>
 
 </Project>
