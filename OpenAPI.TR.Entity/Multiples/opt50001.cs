@@ -9,37 +9,37 @@ public class MultiOpt50001
 {
     /// <summary>체결시간</summary>
     [DataMember, JsonProperty("체결시간")]
-    public string? ConcludingTime
+    public string? QuoteTime
     {
         get; set;
     }
     /// <summary>현재가n</summary>
     [DataMember, JsonProperty("현재가n")]
-    public string? CurrentPriceN
+    public string? CurrentPrice
     {
         get; set;
     }
     /// <summary>대비기호n</summary>
     [DataMember, JsonProperty("대비기호n")]
-    public string? ContrastSymbolN
+    public string? CompareToSign
     {
         get; set;
     }
     /// <summary>전일대비n</summary>
     [DataMember, JsonProperty("전일대비n")]
-    public string? ComparedToThePreviousDayN
+    public string? ComparedToPreviousDay
     {
         get; set;
     }
     /// <summary>체결량</summary>
     [DataMember, JsonProperty("체결량")]
-    public string? TheAmountOfEngagement
+    public string? Amount
     {
         get; set;
     }
     /// <summary>미결제약정n</summary>
     [DataMember, JsonProperty("미결제약정n")]
-    public string? OpenInterestN
+    public string? OpenInterest
     {
         get; set;
     }
@@ -51,7 +51,7 @@ public class MultiOpt50001
     }
     /// <summary>시장베이시스n</summary>
     [DataMember, JsonProperty("시장베이시스n")]
-    public string? MarketBasisN
+    public string? MarketBasis
     {
         get; set;
     }
@@ -75,19 +75,19 @@ public class MultiOpt50001
     }
     /// <summary>기준가n</summary>
     [DataMember, JsonProperty("기준가n")]
-    public string? ReferencePriceN
+    public string? StandardPrice
     {
         get; set;
     }
     /// <summary>등락율n</summary>
     [DataMember, JsonProperty("등락율n")]
-    public string? FluctuationRateN
+    public string? Rate
     {
         get; set;
     }
     /// <summary>누적거래량</summary>
     [DataMember, JsonProperty("누적거래량")]
-    public string? AccumulatedTradingVolume
+    public string? VolumeOfTransaction
     {
         get; set;
     }
