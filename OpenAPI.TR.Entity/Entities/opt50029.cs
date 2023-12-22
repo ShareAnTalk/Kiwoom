@@ -13,11 +13,15 @@ public class Opt50029 : TR
     {
         get; set;
     }
+    public override string[] Id => new[]
+    {
+        "종목코드",
+        "시간단위"
+    };
     /// <summary>
     /// 1.종목코드
     /// 2.시간단위
     /// </summary>
-    public override string[] Id => new[] { "종목코드", "시간단위" };
     public override string[]? Value
     {
         get; set;
@@ -42,6 +46,16 @@ public class Opt50029 : TR
     {
         get => LookupScreenNo;
     }
+    public override string[] Multiple => new[]
+    {
+        "현재가",
+        "거래량",
+        "체결시간",
+        "시가",
+        "고가",
+        "저가",
+        "수정주가이벤트",
+        "전일종가"
+    };
     public override string[] Single => Array.Empty<string>();
-    public override string[] Multiple => new[] { "현재가", "거래량", "체결시간", "시가", "고가", "저가", "수정주가이벤트", "전일종가" };
 }
