@@ -1,5 +1,6 @@
 using Newtonsoft.Json;
 
+using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
 
 namespace ShareInvest.OpenAPI.Entity;
@@ -8,19 +9,19 @@ namespace ShareInvest.OpenAPI.Entity;
 public class SingleOpw20007
 {
     /// <summary>약정금액합계</summary>
-    [DataMember, JsonProperty("약정금액합계")]
+    [DataMember, JsonProperty("약정금액합계"), StringLength(0x10)]
     public string? TotalAmountOfContract
     {
         get; set;
     }
     /// <summary>평가손익합계</summary>
-    [DataMember, JsonProperty("평가손익합계")]
+    [DataMember, JsonProperty("평가손익합계"), StringLength(0x10)]
     public string? TotalValuationGainsAndLosses
     {
         get; set;
     }
     /// <summary>출력건수</summary>
-    [DataMember, JsonProperty("출력건수")]
+    [DataMember, JsonProperty("출력건수"), StringLength(0x10)]
     public string? NumberOfOutputs
     {
         get; set;
