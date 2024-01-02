@@ -36,7 +36,7 @@
         }
         protected internal virtual string LookupScreenNo
         {
-            get => (count++ % 0x70 + 3000).ToString("D4");
+            get => (count++ % 0x40 + 3000).ToString("D4");
         }
         static uint count;
     }
