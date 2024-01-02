@@ -36,14 +36,7 @@
         }
         protected internal virtual string LookupScreenNo
         {
-            get
-            {
-                if (count++ == 0x95)
-                {
-                    count = 0;
-                }
-                return (3000 + count).ToString("D4");
-            }
+            get => (count++ % 0x70 + 3000).ToString("D4");
         }
         static uint count;
     }
