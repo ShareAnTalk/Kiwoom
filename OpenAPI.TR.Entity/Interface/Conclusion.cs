@@ -32,4 +32,24 @@ public class Conclusion
     {
         get; set;
     }
+    /// <summary>단위체결량</summary>
+    public int UnitContractAmount
+    {
+        get; set;
+    }
+    /// <summary>단위체결가</summary>
+    public decimal UnitContractPrice
+    {
+        get; set;
+    }
+    /// <summary>당일매매세금</summary>
+    public int Tax
+    {
+        get; set;
+    }
+    /// <summary>당일매매수수료</summary>
+    public int TradingFee
+    {
+        get; set;
+    }
 }
