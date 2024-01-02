@@ -10,7 +10,7 @@ public class Order
     /// <summary>화면번호</summary>
     public virtual string ScreenNo
     {
-        get => (count++ % 0x10 + 1000).ToString("D4");
+        get => (count++ % 0x30 + 1000).ToString("D4");
     }
     /// <summary>계좌번호 10자리</summary>
     public virtual string? AccNo

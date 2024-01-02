@@ -38,5 +38,6 @@ public enum OrderState
 {
     접수,
     체결,
-    취소
+    취소,
+    확인
 }
