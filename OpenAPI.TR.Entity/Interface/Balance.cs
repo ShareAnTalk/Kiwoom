@@ -17,4 +17,14 @@ public class Balance
     {
         get; set;
     }
+    /// <summary>당일순매수량</summary>
+    public int TransactionQuantity
+    {
+        get; set;
+    }
+    /// <summary>당일총매도손익</summary>
+    public long TradingProfit
+    {
+        get; set;
+    }
 }
