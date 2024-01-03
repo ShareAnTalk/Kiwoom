@@ -23,7 +23,7 @@ public class Conclusion
         get; set;
     }
     /// <summary>주문가격</summary>
-    public decimal OrderPrice
+    public double OrderPrice
     {
         get; set;
     }
@@ -38,7 +38,7 @@ public class Conclusion
         get; set;
     }
     /// <summary>단위체결가</summary>
-    public decimal UnitContractPrice
+    public double UnitContractPrice
     {
         get; set;
     }
