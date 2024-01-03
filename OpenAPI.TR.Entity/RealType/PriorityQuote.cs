@@ -6,7 +6,7 @@ using System.Runtime.Serialization;
 namespace ShareInvest.RealType;
 
 /// <summary>선물옵션우선호가</summary>
-public class FuturesOptionPriorityQuote
+public class PriorityQuote
 {
     /// <summary>0.10.현재가</summary>
     [DataMember, JsonProperty("현재가"), StringLength(0x10)]
