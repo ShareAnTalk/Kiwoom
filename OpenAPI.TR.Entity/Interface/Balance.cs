@@ -27,4 +27,9 @@ public class Balance
     {
         get; set;
     }
+    /// <summary>계좌번호</summary>
+    public string? AccNo
+    {
+        get; set;
+    }
 }
