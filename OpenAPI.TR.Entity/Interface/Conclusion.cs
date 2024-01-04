@@ -3,7 +3,7 @@
 public class Conclusion
 {
     /// <summary>원주문번호</summary>
-    public string? OriginalOrderNumber
+    public string? OrgOrdNo
     {
         get; set;
     }
@@ -42,13 +42,13 @@ public class Conclusion
     {
         get; set;
     }
-    /// <summary>당일매매세금</summary>
-    public int Tax
+    /// <summary>매매구분</summary>
+    public string? TradedClassification
     {
         get; set;
     }
-    /// <summary>당일매매수수료</summary>
-    public int TradingFee
+    /// <summary>계좌번호</summary>
+    public string? AccNo
     {
         get; set;
     }
