@@ -92,6 +92,10 @@ public class OrderFO
         }
         get => ordNo;
     }
+    public virtual string? Strategics
+    {
+        get; set;
+    }
     int quantity = 1;
     int ordKind = 1;
 
