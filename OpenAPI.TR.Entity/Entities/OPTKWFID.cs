@@ -13,14 +13,17 @@ public class OPTKWFID : TR
     {
         get; set;
     }
+
     public override string[] Id
     {
-        get => Array.Empty<string>();
+        get => [];
     }
+
     public override string[]? Value
     {
         get; set;
     }
+
     public override string? RQName
     {
         set
@@ -29,21 +32,26 @@ public class OPTKWFID : TR
         }
         get => "관심종목정보요청";
     }
+
     public override string TrCode
     {
         get => nameof(OPTKWFID);
     }
+
     public override int PrevNext
     {
         get; set;
     }
+
     public override string ScreenNo
     {
         get => LookupScreenNo;
     }
-    public override string[] Single => Array.Empty<string>();
-    public override string[] Multiple => new[]
-    {
+
+    public override string[] Single => [];
+
+    public override string[] Multiple =>
+    [
         "종목코드",
         "종목명",
         "현재가",
@@ -107,10 +115,12 @@ public class OPTKWFID : TR
         "쎄타",
         "베가",
         "로"
-    };
+    ];
+
     protected internal override string LookupScreenNo
     {
         get => (count++ + 7000).ToString("D4");
     }
+
     static uint count;
 }

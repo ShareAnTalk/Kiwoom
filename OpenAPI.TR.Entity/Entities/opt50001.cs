@@ -13,16 +13,16 @@ public class Opt50001 : TR
     {
         get; set;
     }
+
     /// <summary>선옵시간대별체결</summary>
     [DataMember, JsonProperty("선옵시간대별체결")]
     public MultiOpt50001[]? MultiResponse
     {
         get; set;
     }
-    public override string[] Id => new[]
-    {
-        "종목코드"
-    };
+
+    public override string[] Id => ["종목코드"];
+
     /// <summary>
     /// 1.종목코드
     /// </summary>
@@ -30,6 +30,7 @@ public class Opt50001 : TR
     {
         get; set;
     }
+
     public override string? RQName
     {
         set
@@ -38,20 +39,24 @@ public class Opt50001 : TR
         }
         get => "선옵현재가정보요청";
     }
+
     public override string TrCode
     {
         get => nameof(Opt50001);
     }
+
     public override int PrevNext
     {
         get; set;
     }
+
     public override string ScreenNo
     {
         get => LookupScreenNo;
     }
-    public override string[] Single => new[]
-    {
+
+    public override string[] Single =>
+    [
         "현재가",
         "대비기호",
         "전일대비",
@@ -143,9 +148,10 @@ public class Opt50001 : TR
         "예상체결가전일종가대비",
         "예상체결가전일종가대비등락율",
         "이자율"
-    };
-    public override string[] Multiple => new[]
-    {
+    ];
+
+    public override string[] Multiple =>
+    [
         "체결시간",
         "현재가n",
         "대비기호n",
@@ -160,10 +166,12 @@ public class Opt50001 : TR
         "기준가n",
         "등락율n",
         "누적거래량"
-    };
+    ];
+
     protected internal override string LookupScreenNo
     {
         get => (count++ % 0x8 + 5000).ToString("D4");
     }
+
     static uint count;
 }

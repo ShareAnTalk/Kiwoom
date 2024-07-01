@@ -13,15 +13,18 @@ public class Opt50068 : TR
     {
         get; set;
     }
+
     /// <summary>
     /// 1.종목코드
     /// 2.기준일자
     /// </summary>
-    public override string[] Id => new[] { "종목코드", "기준일자" };
+    public override string[] Id => ["종목코드", "기준일자"];
+
     public override string[]? Value
     {
         get; set;
     }
+
     public override string? RQName
     {
         set
@@ -30,18 +33,23 @@ public class Opt50068 : TR
         }
         get => "옵션일차트요청";
     }
+
     public override string TrCode
     {
         get => nameof(Opt50068);
     }
+
     public override int PrevNext
     {
         get; set;
     }
+
     public override string ScreenNo
     {
         get => LookupScreenNo;
     }
-    public override string[] Single => Array.Empty<string>();
-    public override string[] Multiple => new[] { "현재가", "누적거래량", "일자", "시가", "고가", "저가", "전일종가" };
+
+    public override string[] Single => [];
+
+    public override string[] Multiple => ["현재가", "누적거래량", "일자", "시가", "고가", "저가", "전일종가"];
 }
