@@ -23,7 +23,7 @@ public class MultiOpt50067
     }
 
     /// <summary>체결시간</summary>
-    [DataMember, JsonProperty("체결시간")]
+    [DataMember, JsonProperty("체결시간"), StringLength(0x10), Key]
     public string? Time
     {
         get; set;
