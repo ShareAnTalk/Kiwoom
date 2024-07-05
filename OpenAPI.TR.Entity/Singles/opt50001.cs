@@ -44,7 +44,7 @@ public class SingleOpt50001
     }
 
     /// <summary>거래량대비</summary>
-    [DataMember, JsonProperty("거래량대비"), StringLength(8)]
+    [DataMember, JsonProperty("거래량대비"), StringLength(0x10)]
     public string? CompareToPreviousVolume
     {
         get; set;
