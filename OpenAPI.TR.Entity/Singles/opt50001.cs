@@ -79,7 +79,7 @@ public class SingleOpt50001
     }
 
     /// <summary>괴리율</summary>
-    [DataMember, JsonProperty("괴리율"), StringLength(8)]
+    [DataMember, JsonProperty("괴리율"), StringLength(0x10)]
     public string? DisparityRatio
     {
         get; set;
@@ -163,7 +163,7 @@ public class SingleOpt50001
     }
 
     /// <summary>상장중최고가대비율</summary>
-    [DataMember, JsonProperty("상장중최고가대비율"), StringLength(8)]
+    [DataMember, JsonProperty("상장중최고가대비율"), StringLength(0x10)]
     public string? HighestRatio
     {
         get; set;
@@ -184,7 +184,7 @@ public class SingleOpt50001
     }
 
     /// <summary>상장중최저가대비율</summary>
-    [DataMember, JsonProperty("상장중최저가대비율"), StringLength(8)]
+    [DataMember, JsonProperty("상장중최저가대비율"), StringLength(0x10)]
     public string? LowestRatio
     {
         get; set;
