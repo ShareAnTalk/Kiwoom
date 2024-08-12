@@ -37,23 +37,23 @@ public static class TrConstructor
 
                 yield return new OPTKWFID
                 {
-                    Value = new[]
-                    {
-                        listOfStocks
-                    },
+                    Value = [listOfStocks],
                     PrevNext = listOfStocks.Split(';').Length
                 };
             }
         }
     }
+
     public static CultureInfo Culture
     {
         get => new("ko-KR");
     }
+
     public static Assembly Assembly
     {
         get => Assembly.GetExecutingAssembly();
     }
+
     public static bool EventOccursInStock(string? currentPrice)
     {
         var now = DateTime.Now;

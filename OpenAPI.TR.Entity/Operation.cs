@@ -16,6 +16,7 @@ public enum MarketOperation
     선옵_장마감전_동시호가_종료 = 'e',
     선옵_조기개장_알림 = 'f'
 }
+
 public static class Operation
 {
     public static MarketOperation Get(string? arg)

@@ -34,6 +34,7 @@ public enum Conclusion
     신용구분 = 922,
     대출일 = 923
 }
+
 public enum OrderState
 {
     접수,

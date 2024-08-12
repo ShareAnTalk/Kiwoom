@@ -167,11 +167,4 @@ public class Opt50001 : TR
         "등락율n",
         "누적거래량"
     ];
-
-    protected internal override string LookupScreenNo
-    {
-        get => (count++ % 0x8 + 5000).ToString("D4");
-    }
-
-    static uint count;
 }
