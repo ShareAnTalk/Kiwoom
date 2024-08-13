@@ -13,14 +13,15 @@ public class Opt20003 : TR
     {
         get; set;
     }
-    /// <summary>
-    /// 1.업종코드
-    /// </summary>
-    public override string[] Id => new[] { "업종코드" };
+
+    /// <summary>1.업종코드</summary>
+    public override string[] Id => ["업종코드"];
+
     public override string[]? Value
     {
         get; set;
     }
+
     public override string? RQName
     {
         set
@@ -29,18 +30,47 @@ public class Opt20003 : TR
         }
         get => "전업종지수요청";
     }
+
     public override string TrCode
     {
         get => nameof(Opt20003);
     }
+
     public override int PrevNext
     {
         get; set;
     }
+
     public override string ScreenNo
     {
         get => LookupScreenNo;
     }
-    public override string[] Single => Array.Empty<string>();
-    public override string[] Multiple => new[] { "종목코드", "종목명", "현재가", "대비기호", "전일대비", "등락률", "거래량", "비중", "거래대금", "상한", "상승", "보합", "하락", "하한", "상장종목수" };
+
+    public override string[] Single => [];
+
+    public override string[] Multiple =>
+    [
+        "종목코드",
+        "종목명",
+        "현재가",
+        "대비기호",
+        "전일대비",
+        "등락률",
+        "거래량",
+        "비중",
+        "거래대금",
+        "상한",
+        "상승",
+        "보합",
+        "하락",
+        "하한",
+        "상장종목수"
+    ];
+
+    protected internal override string LookupScreenNo
+    {
+        get => (0x400 * 4 + count++).ToString("D4");
+    }
+
+    static uint count;
 }
