@@ -27,7 +27,7 @@ public class Opw20003 : TR
     /// 5.종료일자
     /// 6.비밀번호입력매체구분
     /// </summary>
-    public override string[] Id => new[] { "계좌번호", "시장구분", "비밀번호", "시작일자", "종료일자", "비밀번호입력매체구분" };
+    public override string[] Id => ["계좌번호", "시장구분", "비밀번호", "시작일자", "종료일자", "비밀번호입력매체구분"];
     public override string[]? Value
     {
         get; set;
@@ -52,6 +52,6 @@ public class Opw20003 : TR
     {
         get => LookupScreenNo;
     }
-    public override string[] Single => new[] { "선물약정금액", "옵션약정금액", "선물정산손익", "옵션매매손익", "총손익", "평균예탁금액", "예탁총액", "수수료", "수익율", "조회건수" };
-    public override string[] Multiple => new[] { "종목코드", "매도수구분", "잔고수량", "평균가격", "전일종가", "평가손익", "종목명" };
+    public override string[] Single => ["선물약정금액", "옵션약정금액", "선물정산손익", "옵션매매손익", "총손익", "평균예탁금액", "예탁총액", "수수료", "수익율", "조회건수"];
+    public override string[] Multiple => ["종목코드", "매도수구분", "잔고수량", "평균가격", "전일종가", "평가손익", "종목명"];
 }

@@ -22,7 +22,8 @@ public class Opw20009 : TR
     /// 6.주문가격
     /// 7.비밀번호입력매체구분
     /// </summary>
-    public override string[] Id => new[] { "계좌번호", "비밀번호", "종목코드", "매도수구분", "주문유형", "주문가격", "비밀번호입력매체구분" };
+    public override string[] Id => ["계좌번호", "비밀번호", "종목코드", "매도수구분", "주문유형", "주문가격", "비밀번호입력매체구분"];
+
     public override string[]? Value
     {
         get; set;
@@ -47,6 +48,7 @@ public class Opw20009 : TR
     {
         get => LookupScreenNo;
     }
-    public override string[] Single => new[] { "예탁총액", "예탁현금", "위탁증거금", "현금증거금", "주문가능금액", "주문가능총액", "신규가능수량", "청산가능수량", "총가능수량", "주문가능총액", "필요증거금총액", "총액부족액", "주문가능현금", "필요증거금현금", "현금부족액", "주문가능대용금", "필요증거금대용금", "대용금부족액" };
-    public override string[] Multiple => Array.Empty<string>();
+    public override string[] Single => ["예탁총액", "예탁현금", "위탁증거금", "현금증거금", "주문가능금액", "주문가능총액", "신규가능수량", "청산가능수량", "총가능수량", "주문가능총액", "필요증거금총액", "총액부족액", "주문가능현금", "필요증거금현금", "현금부족액", "주문가능대용금", "필요증거금대용금", "대용금부족액"];
+    
+    public override string[] Multiple => [];
 }

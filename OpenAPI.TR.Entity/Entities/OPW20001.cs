@@ -22,11 +22,13 @@ public class OPW20001 : TR
     /// 6.주문수량
     /// 7.잔고수량
     /// </summary>
-    public override string[] Id => new[] { "계좌번호", "비밀번호", "입력건수", "종목코드", "매수매도구분", "주문수량", "잔고수량" };
+    public override string[] Id => ["계좌번호", "비밀번호", "입력건수", "종목코드", "매수매도구분", "주문수량", "잔고수량"];
+
     public override string[]? Value
     {
         get; set;
     }
+
     public override string? RQName
     {
         set
@@ -35,18 +37,23 @@ public class OPW20001 : TR
         }
         get => "선물옵션청산주문위탁증거금가계산요청";
     }
+
     public override string TrCode
     {
         get => nameof(OPW20001);
     }
+
     public override int PrevNext
     {
         get; set;
     }
+
     public override string ScreenNo
     {
         get => LookupScreenNo;
     }
-    public override string[] Single => new[] { "현재위탁증거금총액", "현재현금예탁필요액", "체결위탁증거금총액", "체결현금예탁필요액", "증감위탁증거금총액", "증감현금예탁필요액" };
-    public override string[] Multiple => Array.Empty<string>();
+
+    public override string[] Single => ["현재위탁증거금총액", "현재현금예탁필요액", "체결위탁증거금총액", "체결현금예탁필요액", "증감위탁증거금총액", "증감현금예탁필요액"];
+
+    public override string[] Multiple => [];
 }

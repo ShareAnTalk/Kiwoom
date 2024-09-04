@@ -29,7 +29,7 @@ public class Opw20004 : TR
     /// 7.비밀번호입력매체구분
     /// 8.정규시간외구분
     /// </summary>
-    public override string[] Id => new[] { "계좌번호", "비밀번호", "조회일", "종목구분", "조회구분", "정렬구분", "비밀번호입력매체구분", "정규시간외구분" };
+    public override string[] Id => ["계좌번호", "비밀번호", "조회일", "종목구분", "조회구분", "정렬구분", "비밀번호입력매체구분", "정규시간외구분"];
     public override string[]? Value
     {
         get; set;
@@ -54,6 +54,7 @@ public class Opw20004 : TR
     {
         get => LookupScreenNo;
     }
-    public override string[] Single => new[] { "출력건수" };
-    public override string[] Multiple => new[] { "주문번호", "매매구분", "종목코드", "주문수량", "체결수량", "미체결수량", "접수번호", "접수구분", "조작자사번", "원주문번호", "주문유형", "종목명", "주문가격", "체결가격", "체결번호", "약정시간", "접수시간", "매체" };
+    public override string[] Single => ["출력건수"];
+
+    public override string[] Multiple => ["주문번호", "매매구분", "종목코드", "주문수량", "체결수량", "미체결수량", "접수번호", "접수구분", "조작자사번", "원주문번호", "주문유형", "종목명", "주문가격", "체결가격", "체결번호", "약정시간", "접수시간", "매체"];
 }
