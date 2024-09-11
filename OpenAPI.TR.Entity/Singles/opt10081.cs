@@ -14,6 +14,7 @@ public class SingleOpt10081
     {
         get; set;
     }
+
     [NotMapped]
     public string? Name
     {

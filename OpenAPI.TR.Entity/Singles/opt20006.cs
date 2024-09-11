@@ -1,5 +1,6 @@
 using Newtonsoft.Json;
 
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Runtime.Serialization;
 
 namespace ShareInvest.OpenAPI.Entity;
@@ -10,6 +11,12 @@ public class SingleOpt20006
     /// <summary>업종코드</summary>
     [DataMember, JsonProperty("업종코드")]
     public string? IndustryCode
+    {
+        get; set;
+    }
+
+    [NotMapped]
+    public string? Name
     {
         get; set;
     }
