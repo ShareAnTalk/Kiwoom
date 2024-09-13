@@ -13,15 +13,18 @@ public class OPT20002 : TR
     {
         get; set;
     }
+
     /// <summary>
     /// 1.시장구분
     /// 2.업종코드
     /// </summary>
-    public override string[] Id => new[] { "시장구분", "업종코드" };
+    public override string[] Id => ["시장구분", "업종코드"];
+
     public override string[]? Value
     {
         get; set;
     }
+
     public override string? RQName
     {
         set
@@ -30,18 +33,23 @@ public class OPT20002 : TR
         }
         get => "업종별주가요청";
     }
+
     public override string TrCode
     {
         get => nameof(OPT20002);
     }
+
     public override int PrevNext
     {
         get; set;
     }
+
     public override string ScreenNo
     {
         get => LookupScreenNo;
     }
-    public override string[] Single => Array.Empty<string>();
-    public override string[] Multiple => new[] { "종목코드", "종목명", "현재가", "전일대비기호", "전일대비", "등락률", "현재거래량", "매도호가", "매수호가", "시가", "고가", "저가" };
+
+    public override string[] Single => [];
+
+    public override string[] Multiple => ["종목코드", "종목명", "현재가", "전일대비기호", "전일대비", "등락률", "현재거래량", "매도호가", "매수호가", "시가", "고가", "저가"];
 }
