@@ -13,18 +13,20 @@ public class Opt10081 : TR
     {
         get; set;
     }
+
     /// <summary>주식일봉차트조회</summary>
     [DataMember, JsonProperty("주식일봉차트조회")]
     public MultiOpt10081[]? MultiResponse
     {
         get; set;
     }
-    public override string[] Id => new[]
-    {
+
+    public override string[] Id => [
         "종목코드",
         "기준일자",
         "수정주가구분"
-    };
+    ];
+
     /// <summary>
     /// 1.종목코드
     /// 2.기준일자
@@ -34,6 +36,7 @@ public class Opt10081 : TR
     {
         get; set;
     }
+
     public override string? RQName
     {
         set
@@ -42,24 +45,26 @@ public class Opt10081 : TR
         }
         get => "주식일봉차트조회요청";
     }
+
     public override string TrCode
     {
         get => nameof(Opt10081);
     }
+
     public override int PrevNext
     {
         get; set;
     }
+
     public override string ScreenNo
     {
         get => LookupScreenNo;
     }
-    public override string[] Single => new[]
-    {
-        "종목코드"
-    };
-    public override string[] Multiple => new[]
-    {
+
+    public override string[] Single => ["종목코드"];
+
+    public override string[] Multiple =>
+    [
         "종목코드",
         "현재가",
         "거래량",
@@ -75,5 +80,5 @@ public class Opt10081 : TR
         "종목정보",
         "수정주가이벤트",
         "전일종가"
-    };
+    ];
 }

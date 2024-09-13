@@ -1,5 +1,6 @@
 using Newtonsoft.Json;
 
+using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
 
 namespace ShareInvest.OpenAPI.Entity;
@@ -8,61 +9,70 @@ namespace ShareInvest.OpenAPI.Entity;
 public class MultiOpt20005
 {
     /// <summary>현재가</summary>
-    [DataMember, JsonProperty("현재가")]
+    [DataMember, JsonProperty("현재가"), StringLength(0x10), Required]
     public string? PresentPrice
     {
         get; set;
     }
+
     /// <summary>거래량</summary>
-    [DataMember, JsonProperty("거래량")]
+    [DataMember, JsonProperty("거래량"), StringLength(0x10), Required]
     public string? VolumeOfTransaction
     {
         get; set;
     }
+
     /// <summary>체결시간</summary>
-    [DataMember, JsonProperty("체결시간")]
+    [DataMember, JsonProperty("체결시간"), StringLength(0x10), Key]
     public string? ConcludingTime
     {
         get; set;
     }
+
     /// <summary>시가</summary>
-    [DataMember, JsonProperty("시가")]
+    [DataMember, JsonProperty("시가"), StringLength(0x10), Required]
     public string? MarketPrice
     {
         get; set;
     }
+
     /// <summary>고가</summary>
-    [DataMember, JsonProperty("고가")]
+    [DataMember, JsonProperty("고가"), StringLength(0x10), Required]
     public string? HighPrice
     {
         get; set;
     }
+
     /// <summary>저가</summary>
-    [DataMember, JsonProperty("저가")]
+    [DataMember, JsonProperty("저가"), StringLength(0x10), Required]
     public string? LowPrice
     {
         get; set;
     }
+
     /// <summary>대업종구분</summary>
-    [DataMember, JsonProperty("대업종구분")]
+    [DataMember, JsonProperty("대업종구분"), StringLength(0x10)]
     public string? LargeIndustryClassification
     {
         get; set;
     }
+
     /// <summary>소업종구분</summary>
-    [DataMember, JsonProperty("소업종구분")]
+    [DataMember, JsonProperty("소업종구분"), StringLength(0x10)]
     public string? SmallBusinessClassification
     {
         get; set;
     }
+
     /// <summary>종목정보</summary>
-    [DataMember, JsonProperty("종목정보")]
+    [DataMember, JsonProperty("종목정보"), StringLength(0x10)]
     public string? StockInformation
     {
         get; set;
     }
+
     /// <summary>전일종가</summary>
-    [DataMember, JsonProperty("전일종가")]
+    [DataMember, JsonProperty("전일종가"), StringLength(0x10)]
     public string? ClosingPriceOfTheDayBefore
     {
         get; set;
