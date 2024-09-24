@@ -10,28 +10,28 @@ public class MultiOpt20005
 {
     /// <summary>현재가</summary>
     [DataMember, JsonProperty("현재가"), StringLength(0x10), Required]
-    public string? PresentPrice
+    public string? CurrentPrice
     {
         get; set;
     }
 
     /// <summary>거래량</summary>
     [DataMember, JsonProperty("거래량"), StringLength(0x10), Required]
-    public string? VolumeOfTransaction
+    public string? TradingVolume
     {
         get; set;
     }
 
     /// <summary>체결시간</summary>
     [DataMember, JsonProperty("체결시간"), StringLength(0x10), Key]
-    public string? ConcludingTime
+    public string? Time
     {
         get; set;
     }
 
     /// <summary>시가</summary>
     [DataMember, JsonProperty("시가"), StringLength(0x10), Required]
-    public string? MarketPrice
+    public string? OpenPrice
     {
         get; set;
     }
