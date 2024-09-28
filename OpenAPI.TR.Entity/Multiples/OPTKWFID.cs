@@ -80,7 +80,7 @@ public class MultiOPTKWFID
 
     /// <summary>체결강도</summary>
     [DataMember, JsonProperty("체결강도"), StringLength(0x10)]
-    public virtual string? FasteningStrength
+    public virtual string? Pressure
     {
         get; set;
     }
