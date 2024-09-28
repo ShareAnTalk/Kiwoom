@@ -13,18 +13,21 @@ public class Opt10080 : TR
     {
         get; set;
     }
+
     /// <summary>주식분봉차트조회</summary>
     [DataMember, JsonProperty("주식분봉차트조회")]
     public MultiOpt10080[]? MultiResponse
     {
         get; set;
     }
-    public override string[] Id => new[]
-    {
+
+    public override string[] Id =>
+    [
         "종목코드",
         "틱범위",
         "수정주가구분"
-    };
+    ];
+
     /// <summary>
     /// 1.종목코드
     /// 2.틱범위
@@ -34,6 +37,7 @@ public class Opt10080 : TR
     {
         get; set;
     }
+
     public override string? RQName
     {
         set
@@ -42,24 +46,29 @@ public class Opt10080 : TR
         }
         get => "주식분봉차트조회요청";
     }
+
     public override string TrCode
     {
         get => nameof(Opt10080);
     }
+
     public override int PrevNext
     {
         get; set;
     }
+
     public override string ScreenNo
     {
         get => LookupScreenNo;
     }
-    public override string[] Single => new[]
-    {
+
+    public override string[] Single =>
+    [
         "종목코드"
-    };
-    public override string[] Multiple => new[]
-    {
+    ];
+
+    public override string[] Multiple =>
+    [
         "현재가",
         "거래량",
         "체결시간",
@@ -73,5 +82,5 @@ public class Opt10080 : TR
         "종목정보",
         "수정주가이벤트",
         "전일종가"
-    };
+    ];
 }
