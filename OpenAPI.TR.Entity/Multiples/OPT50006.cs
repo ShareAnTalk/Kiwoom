@@ -38,7 +38,7 @@ public class MultiOPT50006
 
     /// <summary>체결량</summary>
     [DataMember, JsonProperty("체결량"), StringLength(0x10), Required]
-    public string? Amount
+    public string? Volume
     {
         get; set;
     }
