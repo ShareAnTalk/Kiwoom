@@ -13,21 +13,24 @@ public class SingleOpw20015
     {
         get; set;
     }
+
     /// <summary>ATM행사가격</summary>
     [DataMember, JsonProperty("ATM행사가격")]
     public string? ATMOfferPrice
     {
         get; set;
     }
+
     /// <summary>위치</summary>
     [DataMember, JsonProperty("위치")]
-    public string? Location
+    public string? Position
     {
         get; set;
     }
+
     /// <summary>조회건수</summary>
     [DataMember, JsonProperty("조회건수")]
-    public string? NumberOfInquiries
+    public string? Count
     {
         get; set;
     }
