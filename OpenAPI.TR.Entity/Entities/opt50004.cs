@@ -14,11 +14,11 @@ public class Opt50004 : TR
         get; set;
     }
 
+    public override string[] Id => ["만기년월"];
+
     /// <summary>
     /// 1.만기년월
     /// </summary>
-    public override string[] Id => ["만기년월"];
-
     public override string[]? Value
     {
         get; set;

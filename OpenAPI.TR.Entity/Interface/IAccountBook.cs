@@ -6,10 +6,12 @@ public interface IAccountBook
     {
         get; set;
     }
+
     string? Date
     {
         get; set;
     }
+
     long Lookup
     {
         get; set;
