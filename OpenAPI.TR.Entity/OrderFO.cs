@@ -7,21 +7,25 @@ public class OrderFO
     {
         get; set;
     }
+
     /// <summary>화면번호</summary>
     public virtual string ScreenNo
     {
         get => (count++ % 0x20 + 9000).ToString("D4");
     }
+
     /// <summary>계좌번호 10자리</summary>
     public virtual string? AccNo
     {
         get; set;
     }
+
     /// <summary>종목코드</summary>
     public virtual string? Code
     {
         get; set;
     }
+
     /// <summary>
     /// 주문종류
     /// 1.신규매매
@@ -36,6 +40,7 @@ public class OrderFO
         }
         get => ordKind;
     }
+
     /// <summary>
     /// 매매구분
     /// 1.매도
@@ -45,6 +50,7 @@ public class OrderFO
     {
         get; set;
     }
+
     /// <summary>
     /// 거래구분
     /// 1.지정가
@@ -66,6 +72,7 @@ public class OrderFO
         }
         get => ordType;
     }
+
     /// <summary>주문수량</summary>
     public virtual int Qty
     {
@@ -75,11 +82,17 @@ public class OrderFO
         }
         get => quantity;
     }
+
     /// <summary>주문가격</summary>
-    public virtual string? Price
+    public virtual string Price
     {
-        get; set;
+        set
+        {
+            price = value;
+        }
+        get => price;
     }
+
     /// <summary>
     /// 신규주문에는 공백입력,
     /// 정정/취소시 원주문번호를 입력합니다.
@@ -92,15 +105,18 @@ public class OrderFO
         }
         get => ordNo;
     }
+
     public virtual string? Strategics
     {
         get; set;
     }
+
     int quantity = 1;
     int ordKind = 1;
 
     string ordNo = string.Empty;
     string ordType = "1";
+    string price = "0.01";
 
     static uint count;
 }
