@@ -52,7 +52,7 @@ public class MultiOpt20006
 
     /// <summary>거래대금</summary>
     [DataMember, JsonProperty("거래대금"), StringLength(0x10)]
-    public string? TransactionPrice
+    public string? TransactionAmout
     {
         get; set;
     }
