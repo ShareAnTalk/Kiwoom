@@ -13,29 +13,35 @@ public class OPW00004 : TR
     {
         get; set;
     }
+
     /// <summary>종목별계좌평가현황</summary>
     [DataMember, JsonProperty("종목별계좌평가현황")]
     public MultiOPW00004[]? MultiResponse
     {
         get; set;
     }
+
     /// <summary>
     /// 1.계좌번호
     /// 2.비밀번호
     /// 3.상장폐지조회구분
     /// 4.비밀번호입력매체구분
+    /// 5.거래소구분
     /// </summary>
-    public override string[] Id => new[]
-    {
+    public override string[] Id =>
+    [
         "계좌번호",
         "비밀번호",
         "상장폐지조회구분",
-        "비밀번호입력매체구분"
-    };
+        "비밀번호입력매체구분",
+        "거래소구분"
+    ];
+
     public override string[]? Value
     {
         get; set;
     }
+
     public override string? RQName
     {
         set
@@ -44,20 +50,24 @@ public class OPW00004 : TR
         }
         get => "계좌평가현황요청";
     }
+
     public override string TrCode
     {
         get => nameof(OPW00004);
     }
+
     public override int PrevNext
     {
         get; set;
     }
+
     public override string ScreenNo
     {
         get => LookupScreenNo;
     }
-    public override string[] Single => new[]
-    {
+
+    public override string[] Single =>
+    [
         "계좌명",
         "지점명",
         "예수금",
@@ -77,9 +87,10 @@ public class OPW00004 : TR
         "당월손익율",
         "누적손익율",
         "출력건수"
-    };
-    public override string[] Multiple => new[]
-    {
+    ];
+
+    public override string[] Multiple =>
+    [
         "종목코드",
         "종목명",
         "보유수량",
@@ -95,5 +106,5 @@ public class OPW00004 : TR
         "전일매도수량",
         "금일매수수량",
         "금일매도수량"
-    };
+    ];
 }

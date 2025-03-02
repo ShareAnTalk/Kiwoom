@@ -13,27 +13,33 @@ public class Opw00005 : TR
     {
         get; set;
     }
+
     /// <summary>종목별체결잔고</summary>
     [DataMember, JsonProperty("종목별체결잔고")]
     public MultiOpw00005[]? MultiResponse
     {
         get; set;
     }
+
     /// <summary>
     /// 1.계좌번호
     /// 2.비밀번호
     /// 3.비밀번호입력매체구분
+    /// 4.거래소구분
     /// </summary>
-    public override string[] Id => new[]
-    {
+    public override string[] Id =>
+    [
         "계좌번호",
         "비밀번호",
-        "비밀번호입력매체구분"
-    };
+        "비밀번호입력매체구분",
+        "거래소구분"
+    ];
+
     public override string[]? Value
     {
         get; set;
     }
+
     public override string? RQName
     {
         set
@@ -42,20 +48,24 @@ public class Opw00005 : TR
         }
         get => "체결잔고요청";
     }
+
     public override string TrCode
     {
         get => nameof(Opw00005);
     }
+
     public override int PrevNext
     {
         get; set;
     }
+
     public override string ScreenNo
     {
         get => LookupScreenNo;
     }
-    public override string[] Single => new[]
-    {
+
+    public override string[] Single =>
+    [
         "예수금",
         "예수금D+1",
         "예수금D+2",
@@ -87,9 +97,10 @@ public class Opw00005 : TR
         "예탁담보대출금액",
         "매도담보대출금액",
         "조회건수"
-    };
-    public override string[] Multiple => new[]
-    {
+    ];
+
+    public override string[] Multiple =>
+    [
         "신용구분",
         "대출일",
         "만기일",
@@ -103,5 +114,5 @@ public class Opw00005 : TR
         "평가금액",
         "평가손익",
         "손익률"
-    };
+    ];
 }
